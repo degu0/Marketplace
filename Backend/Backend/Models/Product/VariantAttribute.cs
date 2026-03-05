@@ -2,7 +2,8 @@
 {
     public class VariantAttribute
     {
-        public VariantAttribute Variant { get; set; }
+        public int Id { get; set; }
+        public ProductVariant Variant { get; set; }
         public AttributeValue AttributeValue { get; set; }
     }
 }
