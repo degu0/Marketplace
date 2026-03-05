@@ -1,4 +1,4 @@
-﻿using Backend.Model;
+﻿using ProductModel = Backend.Models.Product.Product;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Data
@@ -7,7 +7,7 @@ namespace Backend.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductModel> Products { get; set; }
 
     }
 }
