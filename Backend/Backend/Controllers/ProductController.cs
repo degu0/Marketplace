@@ -28,7 +28,7 @@ namespace Backend.Controllers
             return Ok(await _service.GetAll());
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id) 
         { 
             var product = await _service.GetById(id);
