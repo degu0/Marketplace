@@ -1,12 +1,13 @@
 ﻿using Backend.Models.Product;
+using Backend.Models.User;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
-using ProductModel = Backend.Models.Product.Product;
 using AttributeModel = Backend.Models.Product.Attribute;
+using ProductModel = Backend.Models.Product.Product;
 
 namespace Backend.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<User>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
