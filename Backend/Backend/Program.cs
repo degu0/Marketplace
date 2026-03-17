@@ -3,6 +3,7 @@ using Backend.Models.User;
 using Backend.Repositories;
 using Backend.Repositories.Interfaces;
 using Backend.Services;
+using Backend.Services.Auth;
 using Backend.Services.Product;
 using Backend.Services.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,6 +21,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
