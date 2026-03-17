@@ -7,6 +7,6 @@ namespace Backend.Models.User
     {
         public UserRole Role { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
